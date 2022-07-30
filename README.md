@@ -9,12 +9,13 @@ Aplicación para añadir una lista de páginas para bloquear usando el archivo H
 # Aviso
 **¡¡¡El archivo de Python directamente no funcionará!!!**
 
-No se puede ejecutar como administrador el archivo de python por lo que es necesario hacer un ejecutable.
+Para poder editar el archivo hosts es necesario ejecutar como administrador, por lo que es necesario convertir en un ejecutable antes de poder usarlo.
 
-Para que funcione es necesario convertirlo en un ejecutable con permisos de administrador.
-
-Antes de convertirlo en ejecutable hay que tener en cuenta que los archivos deben de estar en una carpeta llamada datos y en el programa se debe declarar con la siguiente forma.
+## Imágenes
+Antes de convertirlo en ejecutable hay que tener en cuenta que los archivos como el logo deben de estar dentro del ejecutable.
 
 `os.path.dirname(__file__)+"\datos\logo.ico"`
 
 El ejecutable se ha creado a partir del archivo de Python usando https://github.com/Xaival/Interfaz-PyInstaller
+
+![Config EXE](https://user-images.githubusercontent.com/54257745/181864945-8af20248-f276-4a77-a7e9-4d20c040d1a7.png)
