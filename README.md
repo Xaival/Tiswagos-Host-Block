@@ -11,7 +11,6 @@ Aplicación para añadir una lista de páginas para bloquear usando el archivo H
 
 No se puede ejecutar como administrador el archivo de python por lo que es necesario hacer un ejecutable.
 
-
 Para que funcione es necesario convertirlo en un ejecutable con permisos de administrador.
 
 Antes de convertirlo en ejecutable hay que tener en cuenta que los archivos deben de estar en una carpeta llamada datos y en el programa se debe declarar con la siguiente forma.
