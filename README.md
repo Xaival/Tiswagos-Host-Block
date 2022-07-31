@@ -3,6 +3,8 @@
 
 Para poder editar el archivo hosts es necesario ejecutar como administrador, por lo que es necesario convertir en un ejecutable antes de poder usarlo.
 
+**Tampoco funcionara en sistemas de 32 bits**
+
 <br>
 
 # Tiswagos Host Block
