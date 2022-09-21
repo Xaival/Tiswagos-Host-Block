@@ -139,9 +139,9 @@ def Active(): # Quita y añade la lista de dominios
                 # Bucle que reintente 10 veces o hasta que conecte correctamente con la base de datos
                 while Referencia=="#REF!" and Intentos<10:
                     # Extraer IPs de JSON
-                    ListaJSON = get("https://script.google.com/macros/s/AKfycbzZpQ1X-cvxGqrFqFkKNHWwgcxeyyedmCkMx8Dvf8zLUaX7h7c_FM-b6_8RBfw0bos8_w/exec?sheet=webs").json()["data"]
+                    ListaJSON = get("https://raw.githubusercontent.com/Xaival/JSON/main/Tiswagos%20Liri/Webs_Direccion.json").json()["values"]
                     
-                    Referencia=ListaJSON[0]["direccion"] # Guardar resultado de referencia
+                    Referencia=ListaJSON[0]["Direccion"] # Guardar resultado de referencia
                     Intentos+=1 # Contar veces que se ha reintentado
 
                 # Si al final no hay un fallo con la referencia
@@ -149,7 +149,7 @@ def Active(): # Quita y añade la lista de dominios
 
                     # Añadir IPs a NuevoTexto
                     for Linea in ListaJSON:
-                        NuevoTexto+=Linea["direccion"]+"\n"
+                        NuevoTexto+=Linea["Direccion"]+"\n"
 
                     # Reescribir archivo con NuevoTexto
                     hosts = open(rutaHosts,"w") #(W - Modo escritura)
