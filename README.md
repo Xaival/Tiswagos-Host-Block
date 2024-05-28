@@ -10,7 +10,7 @@ Para poder editar el archivo hosts es necesario ejecutar como administrador, por
 # Tiswagos Host Block
 Aplicación para añadir una lista de páginas para bloquear usando el archivo Host.
 
-Puedes ver la lista de URLs bloqueadas [aquí](https://tiswagos-liri.tumblr.com/antispam).
+Puedes ver la lista de URLs bloqueadas [aquí](https://tiswagos.tumblr.com/antispam).
 
 ![Logo](https://user-images.githubusercontent.com/54257745/181864346-d2715ceb-4c08-46c9-96c0-7c0503160c47.png)
 
