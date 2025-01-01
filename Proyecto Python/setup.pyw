@@ -27,7 +27,7 @@ root.geometry(str(AnchoVentana)+ "x" +str(AltoVentana)+ "+" +str(PosX)+ "+" +str
 
 #Ruta del host
 rutaHosts=os.getenv('SystemRoot')+r"\System32\drivers\etc\hosts"
-
+#rutaHosts=r"D:\hosts"
 
 # Chequear el estado del archivo host
 def CheckEstado():
@@ -51,7 +51,7 @@ def CheckEstado():
                 except: Estado.set("Activado") # Mostrar línea
                 
                 icon.itemconfig(circle, fill='#16842a') # Cambiar icono
-                break # Crerrar bucle
+                break # Cerrar bucle
         
         # Si no contiene ninguna línea
         if not EstadoBool:
@@ -68,7 +68,7 @@ def Desactive(): # Quita la lista de dominios
             if(os.access(rutaHosts,os.W_OK)):
 
                 # Extraer contenido del archivo
-                hosts = open(rutaHosts,"r") #(R - Modo lectura)
+                hosts = open(rutaHosts,"r", encoding="utf-8") #(R - Modo lectura)
                 Lineas=hosts.readlines() # Guardar línea a línea
                 hosts.close # Cerrar el archivo de texto
 
@@ -87,7 +87,7 @@ def Desactive(): # Quita la lista de dominios
                         NuevoTexto+=Linea
 
                 # Reescribir archivo con NuevoTexto
-                hosts = open(rutaHosts,"w") #(W - Modo escritura)
+                hosts = open(rutaHosts,"w", encoding="utf-8") #(W - Modo escritura)
                 hosts.write(NuevoTexto) # Añadir texto al archivo
                 hosts.close # Cerrar el archivo de texto
         
@@ -108,9 +108,12 @@ def Active(): # Quita y añade la lista de dominios
             if(os.access(rutaHosts,os.W_OK)):
 
                 # Extraer contenido del archivo
-                hosts = open(rutaHosts,"r") #(R - Modo lectura)
+                hosts = open(rutaHosts,"r", encoding="utf-8") #(R - Modo lectura)
+                print("Permiso 1")
                 Lineas=hosts.readlines() # Guardar línea a línea
+                print("Permiso 2")
                 hosts.close # Cerrar el archivo de texto
+                print("Permiso 3")
 
 
                 # Quitar las líneas que contengan #AntiSpam
@@ -152,7 +155,7 @@ def Active(): # Quita y añade la lista de dominios
                         NuevoTexto+=Linea["Direccion"]+"\n"
 
                     # Reescribir archivo con NuevoTexto
-                    hosts = open(rutaHosts,"w") #(W - Modo escritura)
+                    hosts = open(rutaHosts,"w", encoding="utf-8") #(W - Modo escritura)
                     hosts.write(NuevoTexto) # Añadir texto al archivo
                     hosts.close # Cerrar el archivo de texto
             
