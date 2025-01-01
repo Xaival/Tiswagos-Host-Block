@@ -9,7 +9,7 @@ import time # Importar librería para fecha
 
 root = Tk() # Crear la variable ventana
 root.title("Tiswagos Host Block") # Título de la ventana
-root.iconbitmap(os.path.dirname(__file__)+"\datos\logo.ico") # Mostrar icono
+root.iconbitmap(os.path.dirname(__file__)+r"\datos\logo.ico") # Mostrar icono
 root.config(bg="black", pady=20, padx=20) # Poner fondo negro
 root.resizable(False, False) # No permite cambiar el alto y ancho
 
@@ -35,7 +35,7 @@ def CheckEstado():
     if (os.access(rutaHosts,os.F_OK) and os.access(rutaHosts,os.R_OK)):
 
         # Extraer contenido del archivo
-        hosts = open(rutaHosts,"r") #(R - Modo lectura)
+        hosts = open(rutaHosts,"r", encoding="utf-8") #(R - Modo lectura)
         Lineas=hosts.readlines() # Guardar línea a línea
         hosts.close # Cerrar el archivo de texto
 
