@@ -140,7 +140,7 @@ def Active(): # Quita y añade la lista de dominios
                 Referencia="#REF!"
                 Intentos=0
                 # Bucle que reintente 10 veces o hasta que conecte correctamente con la base de datos
-                while Referencia=="#REF!" and Intentos<10:
+                while Referencia=="#REF!" or Referencia=="cargando..." and Intentos<10:
                     # Extraer IPs de JSON
                     ListaJSON = get("https://raw.githubusercontent.com/Xaival/JSON/main/Tiswagos/Webs_Direccion.json").json()["values"]
                     
@@ -148,7 +148,7 @@ def Active(): # Quita y añade la lista de dominios
                     Intentos+=1 # Contar veces que se ha reintentado
 
                 # Si al final no hay un fallo con la referencia
-                if Referencia!="#REF!":
+                if Referencia!="#REF!" and Referencia!="cargando...":
 
                     # Añadir IPs a NuevoTexto
                     for Linea in ListaJSON:
